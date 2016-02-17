@@ -27,21 +27,22 @@ namespace ConsoleApplication1
                 Console.WriteLine($"{first} is NOT bigger than {second}");
             }
 
-            //if (args.Length == 0)
-            //{
-            //    Console.WriteLine("No parameters");
-            //    return;
-            //}
+            if (args.Length == 0)
+            {
+                Console.WriteLine("No parameters");
+                //return;
+            }
 
-            //int integer = 1;
-            //string name = "Wekoslav";
-            //int[] array = { 1, 2, 3, 4 };
-            //object obj = new { };
-            //bool logic = integer == 1;
+            int integer = 1;
+            string name = "Wekoslav";
+            int[] array = { 1, 2, 3, 4 };
+            object obj = new { };
+            bool logic = integer == 1;
 
-            //if (logic)
-            //{
-            //}
+            if (logic)
+            {
+            }
+            Console.ReadLine();
         }
     }
 }

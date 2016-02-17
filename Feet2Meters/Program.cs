@@ -21,6 +21,7 @@ namespace Feet2Meters
             Console.WriteLine("Converted " + feet.ToString("0.##") + " feet to " + meters.ToString("0.##") + " meters");
             Console.WriteLine("Converted {0:0.##} feet to {1:0.##} meters", feet, meters);
             Console.WriteLine($"Converted {feet:0.##} feet to {meters:0.##} meters");
+            Console.ReadLine();
         }
     }
 }
