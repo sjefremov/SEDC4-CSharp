@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SJ_TanenBaum", "SJ_TanenBaum\SJ_TanenBaum.csproj", "{FEA3586D-9B25-4671-A471-CEDF5C8F21F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SJ_Exercises", "SJ_Exercises\SJ_Exercises.csproj", "{A63B4953-D1A0-4EDF-B498-7AA00F2446CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SJ_AdventOfCode", "SJ_AdventOfCode\SJ_AdventOfCode.csproj", "{CCA02419-3166-4E39-9471-DC1D401E6E07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEA3586D-9B25-4671-A471-CEDF5C8F21F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA3586D-9B25-4671-A471-CEDF5C8F21F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA3586D-9B25-4671-A471-CEDF5C8F21F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA3586D-9B25-4671-A471-CEDF5C8F21F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A63B4953-D1A0-4EDF-B498-7AA00F2446CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63B4953-D1A0-4EDF-B498-7AA00F2446CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63B4953-D1A0-4EDF-B498-7AA00F2446CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63B4953-D1A0-4EDF-B498-7AA00F2446CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA02419-3166-4E39-9471-DC1D401E6E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA02419-3166-4E39-9471-DC1D401E6E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA02419-3166-4E39-9471-DC1D401E6E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA02419-3166-4E39-9471-DC1D401E6E07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
