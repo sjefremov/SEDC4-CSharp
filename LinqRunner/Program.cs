@@ -13,6 +13,7 @@ namespace LinqRunner
         {
             var persons = InitPersons();
             PrintPersons(persons);
+            
 
             //var malePersons = GetMalePersons(persons);
             //Func<Person, bool> isMale = (Person p) => p.Gender == Gender.Male;
