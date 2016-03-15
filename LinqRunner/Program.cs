@@ -14,8 +14,13 @@ namespace LinqRunner
             var persons = InitPersons();
             PrintPersons(persons);
 
-            var malePerson = GetMalePersons(persons);
-            PrintPersons(malePerson);
+            var malePersons = GetMalePersons(persons);
+            PrintPersons(malePersons);
+        }
+
+        private static IEnumerable<Person> GetMalePersons(IEnumerable<Person> persons)
+        {
+            return persons.Where(p => p.Gender == Gender.Male);
         }
 
         private static void PrintPersons(IEnumerable<Person> persons)
@@ -24,7 +29,7 @@ namespace LinqRunner
             {
                 Console.WriteLine(person);
             }
-            Console.WriteLine("---------------------------")
+            Console.WriteLine("---------------------------");
         }
 
         private static IEnumerable<Person> InitPersons()
