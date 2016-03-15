@@ -14,7 +14,11 @@ namespace LinqRunner
             var persons = InitPersons();
             PrintPersons(persons);
 
-            var malePersons = GetMalePersons(persons);
+            //var malePersons = GetMalePersons(persons);
+            //Func<Person, bool> isMale = (Person p) => p.Gender == Gender.Male;
+            //Func<Person, bool> isMale = p => p.Gender == Gender.Male;
+            //var malePersons = GetPersonsFilter(persons, isMale);
+            var malePersons = GetPersonsFilter(persons, p => p.Gender == Gender.Male);
             PrintPersons(malePersons);
 
             var youngerThanFourtyPeople = GetYoungerThan(persons, 40);
@@ -22,6 +26,11 @@ namespace LinqRunner
 
             var peopleWithFirstNameLongerThanLastName = GetPeopleWithFirstNameLongerThanLastName(persons);
             PrintPersons(peopleWithFirstNameLongerThanLastName);
+        }
+
+        private static IEnumerable<Person> GetPersonsFilter(IEnumerable<Person> persons, Func<Person, bool> filter)
+        {
+            return persons.Where(filter);
         }
 
         private static IEnumerable<Person> GetPeopleWithFirstNameLongerThanLastName(IEnumerable<Person> persons)
