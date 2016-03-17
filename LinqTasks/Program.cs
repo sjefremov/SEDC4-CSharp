@@ -11,7 +11,31 @@ namespace LinqTasks
     {
         static void Main(string[] args)
         {
-            var sumFemaleAges = InitPersons().Where(p => p.Gender == Gender.Female).Sum(p => p.Age);
+            var persons = InitPersons();
+
+            var sumFemaleAges = persons.Where(p => p.Gender == Gender.Female).Sum(p => p.Age);
+
+            var age = 10;
+            var firstYoungerThan = persons.FirstOrDefault(p => p.Age < age);
+            if (firstYoungerThan == null)
+            {
+                Console.WriteLine($"No one is under {age} years old.");
+            }
+            else
+            {
+                Console.WriteLine($"First person under {age} is {firstYoungerThan}");
+            }
+
+            
+            var maxAge = persons.Max(p => p.Age);
+            Console.WriteLine("The oldest ones: ");
+            persons.Where(p => p.Age == maxAge)
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+            var theOldestOne = persons.OrderByDescending(p => p.Age).First();
+            Console.WriteLine($"The oldest one is {theOldestOne}");
+
         }
 
         private static IEnumerable<Person> InitPersons()
