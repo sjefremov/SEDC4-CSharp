@@ -11,7 +11,7 @@ namespace LinqTasks
     {
         static void Main(string[] args)
         {
-
+            var sumFemaleAges = InitPersons().Where(p => p.Gender == Gender.Female).Sum(p => p.Age);
         }
 
         private static IEnumerable<Person> InitPersons()
