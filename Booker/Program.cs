@@ -34,7 +34,7 @@ namespace Booker
             //    result.Add(data);
             //}
 
-            var result = 
+            var bookResult = 
                 from b in books
                 join a in authors on b.AuthorID equals a.ID
                 select new
@@ -44,7 +44,33 @@ namespace Booker
                     Sheets = b.PageCount / 16
                 };
 
-            Console.WriteLine(JsonConvert.SerializeObject(result));
+            Console.WriteLine(JsonConvert.SerializeObject(bookResult));
+
+            var pagesPerAuthor =
+                from a in authors
+                select new
+                {
+                    a.FirstName,
+                    a.LastName,
+                    TotalPages =
+                        (from b in books
+                         where b.AuthorID == a.ID
+                         select b.PageCount).Sum()
+                };
+
+            var pagesPerAuthor1 =
+                from b in books
+                group b by b.AuthorID into g
+                join a in authors on g.Key equals a.ID
+                select new
+                {
+                    AuthorName = $"{a.LastName}, {a.FirstName}",
+                    TotalPages = g.Sum(bb => bb.PageCount),
+                };
+            
+            Console.WriteLine(JsonConvert.SerializeObject(pagesPerAuthor));
+
+            var booksPerAuthor = authors.Single(a => a.ID == 1).BookIds.Count();
         }
 
         static void InitBooks()
