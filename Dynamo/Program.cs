@@ -10,13 +10,17 @@ namespace Dynamo
     {
         static void Main(string[] args)
         {
-            dynamic x = DynCreator.GetSomeObject(0.7);
-            x.FirstName = "Weko";
-            Console.WriteLine(x);
+            dynamic person = DynCreator.GetSomeObject(ObjectType.Person);
+            person.FirstName = "Weko";
+            Console.WriteLine(person);
 
-            dynamic y = DynCreator.GetSomeObject(0.3);
-            y.Year = 1997;
-            Console.WriteLine(y);
+            dynamic vehicle = DynCreator.GetSomeObject(ObjectType.Vehicle);
+            vehicle.Year = 1997;
+            Console.WriteLine(vehicle);
+
+            dynamic rectangle = DynCreator.GetSomeObject(ObjectType.Rectangle);
+            rectangle.Height = 30;
+            Console.WriteLine(rectangle);
 
         }
     }
